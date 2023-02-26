@@ -9,24 +9,34 @@ const client = new MongoClient(uri, {
 });
 
 client.connect();
-/** 
+/**
 @param {string} username
 @param {string} password
 @returns 유저네임, 비밀번호를 넣으면 그거에 맞는 결과를 뱉어줍니다. 없으면 널~
 @todo 안전을 위해 hash 기능 추가해야함
  */
-
 function indb(username, password) {
   const collection = client.db("main").collection("test");
   collection
     .findOne({ username: username, password: password })
     .then((result) => {
-      console.log("그런 사람 있어요");
-      return result;
+      if (result != null) {
+        console.log("선량한 시민");
+        return result;
+      } else {
+        console.log("중국산 해커(中国制造的黑客)");
+        return result;
+      }
     });
 }
 
-const getdb = (param1, param2) => {};
+function getdb(username, password) {
+  const collection = client.db("main").collection("test");
+  if (indb(username, password) == null) {
+    console.log("ERROR: no value");
+    return null;
+  }
+}
 
 module.exports = {
   indb,

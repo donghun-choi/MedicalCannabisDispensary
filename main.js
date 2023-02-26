@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 const routing = require("./server");
 const DB = require("./database");
-
+DB.indb();
 // 뷰 엔진 설정
 app.set("view engine", "ejs");
 app.set("views", "./views");
