@@ -1,0 +1,103 @@
+<!-- contact.ejs 파일 -->
+
+<!DOCTYPE html>
+<html class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="<%= bootstrapcss %>" />
+    <script defer src="<%= bootstrapjs %>"></script>
+  </head>
+  <body class="d-flex h-100 text-center flex-column">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container px-4">
+        <a class="navbar-brand">왔노라</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/register">회원가입/로그인</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 class="mt-5 pt-5"><strong>왔노라 회원가입</strong></h1>
+    <div class="m-auto">
+      <form method="post" action="/submit">
+        <div class="form-group m-auto">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1"
+            >username(You will use this when you Sing in)</label
+          >
+          <input
+            type="username"
+            class="form-control"
+            id="username"
+            name="username"
+            placeholder="username"
+          />
+        </div>
+        <div class="form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="복숭아 관련 약관"
+          />
+          <label class="form-check-label" for="복숭아 관련 약관"
+            >이 사이트에 가입함으로써 당신은 7월 28일에는 복숭아를 먹을 수
+            없다는 것에 동의합니다.</label
+          >
+        </div>
+        <button type="submit" class="btn btn-primary">회원가입</button>
+        <div class="alert-danger">이미 회원이시라고요?</div>
+      </form>
+      <button
+        class="btn btn-primary"
+        onclick="javascript:location.href='/login'"
+      >
+        로그인
+      </button>
+    </div>
+  </body>
+</html>

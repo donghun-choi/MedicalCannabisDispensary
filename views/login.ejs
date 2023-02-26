@@ -1,0 +1,84 @@
+<!-- contact.ejs 파일 -->
+
+<!DOCTYPE html>
+<html class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="<%= bootstrapcss %>" />
+    <script defer src="<%= bootstrapjs %>"></script>
+  </head>
+  <body class="d-flex h-100 text-center flex-column">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container px-4">
+        <a class="navbar-brand">왔노라</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/register">회원가입/로그인</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 class="mt-5 pt-5"><strong>Loginining to 왔노라</strong></h1>
+    <div class="m-auto">
+      <form method="post" action="/submit">
+        <div class="form-group">
+          <label for="exampleInputPassword1">Username</label>
+          <input
+            type="username"
+            class="form-control"
+            id="username"
+            name="username"
+            placeholder="username"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">로그인</button>
+      </form>
+    </div>
+    <p>
+      로그인이 안 되시나요? 그러면 어쩔 수 없어요. 아직은 비밀번호 찾기 기능이
+      없거든요..
+    </p>
+    <p>운이 좋다면, Moose가 그걸 찾는걸 도와 줄 수 있을지도 모른답니다!</p>
+    <p class="d-none">
+      이 사이트는 아직 보안적으로 신생아에오... 해킹할 수 있다면 해보세요!
+      SQL인젝션은 통하지 않아요!
+    </p>
+    <footer class="py-5 bg-dark">
+      <div class="container px-4">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; What? no Late! 2022
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
