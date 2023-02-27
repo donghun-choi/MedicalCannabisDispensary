@@ -37,3 +37,6 @@ img {
     height: 50vh;
   }
 }
+.auther {
+  cursor: pointer;
+}

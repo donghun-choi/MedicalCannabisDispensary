@@ -6,6 +6,8 @@
     <meta charset="utf-8" />
     <title><%= title %></title>
     <link rel="stylesheet" href="<%= bootstrapcss %>" />
+    <link rel="stylesheet" href="../css/common.css" />
+
     <script defer src="<%= bootstrapjs %>"></script>
   </head>
   <body class="d-flex h-100 text-center flex-column">
@@ -43,36 +45,18 @@
       <form method="post" action="/submit">
         <div class="form-group">
           <label for="exampleInputPassword1">Username</label>
-          <input
-            type="username"
-            class="form-control"
-            id="username"
-            name="username"
-            placeholder="username"
-          />
+          <input type="username" class="form-control" id="username" name="username" placeholder="username" />
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="password"
-            name="password"
-            placeholder="Password"
-          />
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
         </div>
         <button type="submit" class="btn btn-primary mt-3">로그인</button>
       </form>
     </div>
-    <p>
-      로그인이 안 되시나요? 그러면 어쩔 수 없어요. 아직은 비밀번호 찾기 기능이
-      없거든요..
-    </p>
+    <p>로그인이 안 되시나요? 그러면 어쩔 수 없어요. 아직은 비밀번호 찾기 기능이 없거든요..</p>
     <p>운이 좋다면, Moose가 그걸 찾는걸 도와 줄 수 있을지도 모른답니다!</p>
-    <p class="d-none">
-      이 사이트는 아직 보안적으로 신생아에오... 해킹할 수 있다면 해보세요!
-      SQL인젝션은 통하지 않아요!
-    </p>
+    <p class="d-none">이 사이트는 아직 보안적으로 신생아에오... 해킹할 수 있다면 해보세요! SQL인젝션은 통하지 않아요!</p>
     <%- include("components/footer"); -%>
   </body>
 </html>
