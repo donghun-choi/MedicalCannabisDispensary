@@ -1,0 +1,39 @@
+img {
+  max-width: 100%;
+}
+
+.default-section {
+  padding: 140px 0px;
+  height: 50vh;
+}
+.first-section {
+  background-color: #3e66f4;
+  color: #ffffff;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content-area {
+  margin: auto;
+  padding: 0px 140px;
+  max-width: 1580px;
+}
+.subtext {
+  color: #000;
+  /* font-size: 22px; */
+}
+.bold {
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .content-area {
+    padding: 0px 40px;
+  }
+  .default-section {
+    padding: 40px 0px;
+    height: 50vh;
+  }
+}
